@@ -33,7 +33,7 @@ path_name = save_dir + version_name + '.pt'
 # load the config.json file that specifies data 
 # location parameters and other hyperparameters 
 # required.
-config = json.load(open(save_dir + 'config - ' + version_name + '.json'))
+config = json.load(open(save_dir + 'config.json'))
 
 # create a train, validation and test data loader
 train_loader = Drive360Loader(config, 'train')
