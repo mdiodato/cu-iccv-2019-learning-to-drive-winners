@@ -1,0 +1,57 @@
+{
+    "cuda": {
+        "use": true
+    },
+    "front": true,
+    "data": true,
+    "multi_camera": {
+        "right_left": false,
+        "rear": false
+    },
+    "data_loader": {
+        "historic":{
+            "number": 2,
+            "frequency": 4
+        },
+        "data_dir": "./Drive360Images_160_90/",
+        "train":{
+            "csv_name": "drive360challenge_train.csv",
+            "batch_size": 8,
+            "shuffle": true,
+            "num_workers": 4
+        },
+        "validation": {
+            "csv_name": "drive360challenge_validation.csv",
+            "batch_size": 8,
+            "shuffle": true,
+            "num_workers": 4
+        },
+        "test": {
+            "csv_name": "drive360challenge_test.csv",
+            "batch_size": 8,
+            "shuffle": false,
+            "num_workers": 4
+        }
+    },
+    "target":{
+        "normalize": true,
+        "mean": {"canSteering": -5.406788214535221,
+                "canSpeed": 13.426163367846936},
+        "std": {"canSteering": 73.41232589456718,
+                "canSpeed": 7.8257638553586455}
+    },
+    "image": {
+        "norm": {
+            "mean": [
+                0.4443069311879691,
+                0.44355877047930287,
+                0.44472938612018881
+            ],
+            "std": [
+                0.084803636530148815,
+                0.084356488922100445,
+                0.086008411332264681
+            ]
+        }
+    }
+}
